@@ -1,4 +1,4 @@
-# W3C E-Commerce Product Feed CG
+# W3C E-Commerce Product Feed – Core Schema 
 
 Universal machine-readable product feeds.
 
