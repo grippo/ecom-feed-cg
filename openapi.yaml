@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: E-Commerce Product Feed API
+  version: 0.1.0
+paths:
+  /feed/products.json:
+    get:
+      summary: Paginated product catalog
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+      responses:
+        '200':
+          description: Product list
+          content:
+            application/product+json:
+              schema:
+                $ref: '#/components/schemas/ProductList'
+          headers:
+            Link:
+              schema:
+                type: string
+                example: '<https://store.com/feed/products.json?page=2>; rel="next"'
+components:
+  schemas:
+    ProductList:
+      type: object
+      required: ["@context", "@type", "itemListElement"]
+      properties:
+        "@context":
+          type: string
+          example: "https://w3c.org/ecom/context.jsonld"
+        "@type":
+          const: ItemList
+        itemListElement:
+          type: array
+          items:
+            $ref: 'schema.json'
+        numberOfItems:
+          type: integer

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "E-Com Product Core",
+  "type": "object",
+  "required": ["@context", "@type", "id", "name", "image", "offers"],
+  "properties": {
+    "@context": { "const": "https://w3c.org/ecom/context.jsonld" },
+    "@type": { "const": "Product" },
+    "id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "name": { "type": "string", "minLength": 1, "maxLength": 150 },
+    "image": { "type": "string", "format": "uri", "pattern": "^https?://" },
+    "offers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["@type", "price", "priceCurrency", "availability"],
+        "properties": {
+          "@type": { "const": "Offer" },
+          "price": { "type": "number", "minimum": 0 },
+          "priceCurrency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+          "availability": {
+            "type": "string",
+            "enum": [
+              "https://schema.org/InStock",
+              "https://schema.org/OutOfStock",
+              "https://schema.org/PreOrder"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

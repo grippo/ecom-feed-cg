@@ -1,0 +1,7 @@
+{
+"@context": "https://w3c.org/ecom/context.jsonld",
+"@type": "Product",
+"name": "Missing ID",
+"image": "https://store.com/img.jpg",
+"offers": [ { "@type": "Offer", "price": 10, "priceCurrency": "USD", "availability": "https://schema.org/InStock" } ]
+}

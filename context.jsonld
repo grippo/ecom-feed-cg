@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "ecom": "https://w3c.org/ecom/ns#",
+    "id": "@id",
+    "image": { "@id": "image", "@type": "@id" },
+    "offers": { "@id": "offers", "@type": "Offer", "@container": "@set" },
+    "price": { "@id": "price", "@type": "xsd:decimal" },
+    "priceCurrency": { "@id": "priceCurrency", "@type": "xsd:string" },
+    "availability": { "@id": "availability", "@type": "@vocab" }
+  }
+}
