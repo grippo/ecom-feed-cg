@@ -9,30 +9,29 @@ npm install
 npx ecom-feed-validate examples/valid-single.json
 ```
 
+## Run Demo Server
 
-Run Demo Server
-bashnode implementations/node/server.js
-Spec
+```bash
+node implementations/node/server.js
+```
 
-Core Schema
+## Spec
+
+## Core Schema
+
 JSON-LD Context
-OpenAPI
 
-Test
-bashnpm test
-Join
-https://www.w3.org/community/ecom-feed/
-Test
+## OpenAPI
 
+## Test
 > @ecom-feed/core@0.1.0 test
 > node test-suite/run.js
-Run Demo Server
 
-Spec
+```bash
+npm test
+```
 
-Core Schema
-JSON-LD Context
-OpenAPI
+https://www.w3.org/community/ecom-feed/
 
-Join
+## Join
 https://www.w3.org/community/ecom-feed/
