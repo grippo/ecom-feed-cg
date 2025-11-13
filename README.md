@@ -17,21 +17,16 @@ node implementations/node/server.js
 
 ## Spec
 
-## Core Schema
-
-JSON-LD Context
-
-## OpenAPI
+* Core Schema
+* JSON-LD Context
+* OpenAPI
 
 ## Test
-> @ecom-feed/core@0.1.0 test
-> node test-suite/run.js
 
 ```bash
 npm test
 ```
 
-https://www.w3.org/community/ecom-feed/
-
 ## Join
+
 https://www.w3.org/community/ecom-feed/
