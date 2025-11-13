@@ -1,15 +1,27 @@
-W3C E-Commerce Product Feed CG
+# W3C E-Commerce Product Feed CG
+
 Universal machine-readable product feeds.
-Install
 
-up to date, audited 7 packages in 527ms
+## Install & Validate
 
-2 packages are looking for funding
-  run `npm fund` for details
+```bash
+npm install
+npx ecom-feed-validate examples/valid-single.json
+```
 
-found 0 vulnerabilities
-Validate
 
+Run Demo Server
+bashnode implementations/node/server.js
+Spec
+
+Core Schema
+JSON-LD Context
+OpenAPI
+
+Test
+bashnpm test
+Join
+https://www.w3.org/community/ecom-feed/
 Test
 
 > @ecom-feed/core@0.1.0 test
